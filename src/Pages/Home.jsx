@@ -5,7 +5,7 @@ import Blog from '../Components/Blog'
 
 function Home() {
   return (
-    <div>
+    <div >
         <Search/>
         <IntroPost/>
         <Blog/>
