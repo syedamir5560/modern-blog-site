@@ -9,7 +9,7 @@ function Search({ selectedTag }) {
         },
         {
             id: 2,
-            name: 'React'
+            name: 'React JS'
         },
         {
             id: 3,
@@ -73,7 +73,6 @@ function Search({ selectedTag }) {
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="flex md:gap-16 sm:gap-5 justify-center mt-5 text-[15px] sm:text-[20px] md:text-2xl  gap-5 sm:px-2 ">
                 {

@@ -31,7 +31,7 @@ function Home() {
       setPost(orgPost);
       return;
     }
-    const result = orgPost.filter(item => item.tag == tag);
+    const result = orgPost.filter(item => item.tags == tag);
     setPost(result);
   }
   return (

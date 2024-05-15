@@ -36,12 +36,12 @@ function Blog({ posts }) {
   //   }
   // };
 
-  // const excerpt = (str) => {
-  //   if (str.length > 50) {
-  //     str = str.substring(0, 100) + " ... ";
-  //   }
-  //   return str
-  // }
+  const excerpt = (str) => {
+    if (str.length > 50) {
+      str = str.substring(0, 100) + " ... ";
+    }
+    return str
+  }
 
   // console.log(data)
 
@@ -54,7 +54,7 @@ function Blog({ posts }) {
               <img className="w-full rounded-2xl hover:scale-110 transition-all " src={item.image} />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{item.title}</div>
-                <p className="text-gray-700 text-base"> {item.content}</p>
+                <p className="text-gray-700 text-base"> {excerpt(item.content)}</p>
                 <h3 className='mt-2 text-[20px] font-mono '>{item.author}</h3>
               </div>
               <div className="px-6 pt-4 pb-2">
