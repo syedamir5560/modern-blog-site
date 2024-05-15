@@ -10,11 +10,11 @@ function Header() {
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 {/* Logo */}
                 <div className="flex items-center mb-4 md:mb-0">
-                    <img src="./src/Images/Logo.webp" alt="Logo" className="h-12  w-[180px] mr-4" onClick={() => navigate('/')} />
+                    <img src="./src/Images/Logo.webp" alt="Logo" className="h-12  w-[180px]" onClick={() => navigate('/')} />
                 </div>
 
                 {/* Navigation */}
-                <nav className="flex flex-col md:flex-row justify-center md:justify-center flex-grow mb-4 md:mb-0  md:text-center">
+                <nav className="flex flex-col md:flex-row justify-center  md:justify-center flex-grow mb-4 md:mb-0  md:text-center">
                     <NavLink to="/" className=" text-black text-[1.2rem] hover:font-bold cursor-pointer px-4 py-2 md:py-0 md:px-4" activeClassName="font-bold">
                         Home
                     </NavLink>
