@@ -3,14 +3,14 @@ import { NavLink, useNavigate } from "react-router-dom"; // Import NavLink from 
 
 
 function Header() {
-    
-let navigate = useNavigate()
+
+    let navigate = useNavigate()
     return (
         <header className="bg-white-200 py-4 px-9 border-b-2">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 {/* Logo */}
                 <div className="flex items-center mb-4 md:mb-0">
-                    <img src="./src/Images/Logo.webp" alt="Logo" className="h-12  w-[180px] mr-4" onClick={()=>navigate('/')}/>
+                    <img src="./src/Images/Logo.webp" alt="Logo" className="h-12  w-[180px] mr-4" onClick={() => navigate('/')} />
                 </div>
 
                 {/* Navigation */}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Search() {
+function Search({ selectedTag }) {
 
     let tags = [
         {
@@ -27,7 +27,7 @@ function Search() {
 
     ]
 
-    let [activeIndex,setActiveIndex]=useState(0)
+    let [activeIndex, setActiveIndex] = useState(0)
 
     return (
         <div>
@@ -75,17 +75,16 @@ function Search() {
                 </div>
 
             </div>
-          <div className="flex md:gap-16 sm:gap-5 justify-center mt-5 text-[15px] sm:text-[20px] md:text-2xl  gap-5 sm:px-2 ">
-          {
-                tags.map((items,index) => (
-                    <ul key={items.id} onClick={()=>setActiveIndex(index )} className={`${index==activeIndex?'bg-blue-600 px-5  rounded-full cursor-pointer':null}`}>
-                        <li className="cursor-pointer hover:scale-110 " >{items.name}</li>
-                    </ul>
-                )
-
-                )
-            }
-          </div>
+            <div className="flex md:gap-16 sm:gap-5 justify-center mt-5 text-[15px] sm:text-[20px] md:text-2xl  gap-5 sm:px-2 ">
+                {
+                    tags.map((items, index) => (
+                        <ul key={items.id} onClick={() => { setActiveIndex(index); selectedTag(items.name) }} className={`${index == activeIndex ? 'bg-blue-600 px-5  rounded-full cursor-pointer' : null}`}>
+                            <li className="cursor-pointer hover:scale-110 " >{items.name}</li>
+                        </ul>
+                    )
+                    )
+                }
+            </div>
         </div>
     );
 }

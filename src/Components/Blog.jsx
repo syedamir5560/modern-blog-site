@@ -21,7 +21,6 @@ function Blog() {
     try {
       let response = await axios.get('https://6643cb3f6c6a6565870858dc.mockapi.io/blog')
       setData(response.data)
-    
 
     }
     catch (error) {
@@ -53,8 +52,8 @@ function Blog() {
         <div className='w-full  flex flex-wrap items-center justify-around px-10 py-5 ' >{
           data.map((item) => {
             return (
-              <div className="max-w-md mx-auto rounded py-5 overflow-hidde shadow-lg cursor-pointer" key={item.id} onClick={() => navigate('blogdetails/'+item.id)} >
-                <img className="w-full rounded-2xl" src={item.image} />
+              <div className="max-w-md mx-auto rounded py-5 overflow-hidde shadow-lg cursor-pointer" key={item.id} onClick={() => navigate('blogdetails/' + item.id)} >
+                <img className="w-full rounded-2xl hover:scale-110 transition-all " src={item.image} />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">{item.title}</div>
                   <p className="text-gray-700 text-base"> {excerpt(item.content)}</p>
