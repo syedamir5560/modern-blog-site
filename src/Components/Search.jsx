@@ -78,8 +78,8 @@ function Search() {
           <div className="flex md:gap-16 sm:gap-5 justify-center mt-5 text-[15px] sm:text-[20px] md:text-2xl  gap-5 sm:px-2 ">
           {
                 tags.map((items,index) => (
-                    <ul onClick={()=>setActiveIndex(index )} className={`${index==activeIndex?'bg-blue-600 px-5  rounded-full cursor-pointer':null}`}>
-                        <li className="cursor-pointer hover:scale-110 ">{items.name}</li>
+                    <ul key={items.id} onClick={()=>setActiveIndex(index )} className={`${index==activeIndex?'bg-blue-600 px-5  rounded-full cursor-pointer':null}`}>
+                        <li className="cursor-pointer hover:scale-110 " >{items.name}</li>
                     </ul>
                 )
 
